@@ -107,6 +107,18 @@ li {
 
 }
 
+                            /* ?Sticky Navbar desigen Start */
+
+ /* .sticky .header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 9999;
+    background-color:rgba(255, 255, 255, 1);
+    box-shadow: var(--shadow);
+}                             */
+
 
                                /* Resuable code Section */
 
@@ -604,9 +616,17 @@ li {
     font-size: 1.6rem;
     font-family: 'Work Sans';
     width: 100%;
-
-
- }
+}
+.section-contact-main .success input,.section-contact-main .success textarea {
+    /* outline: 0; */
+    /* border-color: red; */
+    border-color: #2ecc71;
+}
+.section-contact-main .success input,.section-contact-main .success textarea {
+    /* outline: 0; */
+    /* border-color: red; */
+    border-color: #e74c3c;
+}
 
  .section-contact-main input[type=submit]{
      max-width: 30%;
