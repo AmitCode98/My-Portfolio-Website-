@@ -69,4 +69,51 @@
 // }
 
 
+                    // !Animated Number  Counter Section
+    
+
+const workSection = document.querySelector('.section-work-data');
+const workObserver = new IntersectionObserver(
+    (entries,observer) => {
+    const [entry]= entries;
+    console.log(entry);
+
+    if(entry.isIntersecting==false)return;
+
+                   // Add
+    const counterNum =document.querySelectorAll(".counter-numbers");
+
+const speed = 200;
+
+counterNum.forEach((curElem)=> {
+
+    const updateNumber = () =>{
+        const targetNumber = parseInt(curElem.dataset.number);
+        // console.log(targetNumber);
+
+        const intialNum = parseInt(curElem.innerText);
+        // console.log(intialNum);
+
+        const incrementNumber = Math.trunc(targetNumber/speed);
+        // console.log(incrementNumber);
+
+        if(intialNum < targetNumber){
+            curElem.innerText = `${intialNum + incrementNumber}+`;
+            setTimeout(updateNumber, 10);
+        }
+    };
+    updateNumber();
+
+});
+observer.unobserve(workSection)
+
+}, {
+    root:null,
+    threshold:0,
+
+});
+
+workObserver.observe(workSection);
+
+
 
