@@ -66,10 +66,17 @@
 
 // function setErrorMsg(input, errormsgs){
 
-// }
+// }               
+                  // <!-- Mobile Responsive Navbar Button Desigen -->
+       const mobile_nav = document.querySelector(".mobile-navbar-btn");
+       const headerElem = document.querySelector(".header");
+       
+       mobile_nav.addEventListener("click", () => {
+        headerElem.classList.toggle("active")
+       }); 
 
 
-                    // !Animated Number  Counter Section
+                    // !Animated Number Counter Section
     
 
 const workSection = document.querySelector('.section-work-data');
