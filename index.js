@@ -66,57 +66,59 @@
 
 // function setErrorMsg(input, errormsgs){
 
-// }               
-                  // <!-- Mobile Responsive Navbar Button Desigen -->
-       const mobile_nav = document.querySelector(".mobile-navbar-btn");
-       const headerElem = document.querySelector(".header");
-       
-       mobile_nav.addEventListener("click", () => {
-        headerElem.classList.toggle("active")
-       }); 
+// }        
 
 
-                    // !Animated Number Counter Section
-    
+// <!-- Mobile Responsive Navbar Button Desigen -->
+
+const mobile_nav = document.querySelector(".mobile-navbar-btn");
+const headerElem = document.querySelector(".header");
+
+mobile_nav.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});
+
+
+// !Animated Number Counter Section
 
 const workSection = document.querySelector('.section-work-data');
 const workObserver = new IntersectionObserver(
-    (entries,observer) => {
-    const [entry]= entries;
-    console.log(entry);
+    (entries, observer) => {
+        const [entry] = entries;
+        console.log(entry);
 
-    if(entry.isIntersecting==false)return;
+        if (entry.isIntersecting == false) return;
 
-                   // Add
-    const counterNum =document.querySelectorAll(".counter-numbers");
+        // Add
+        const counterNum = document.querySelectorAll(".counter-numbers");
 
-const speed = 200;
+        const speed = 200;
 
-counterNum.forEach((curElem)=> {
+        counterNum.forEach((curElem) => {
 
-    const updateNumber = () =>{
-        const targetNumber = parseInt(curElem.dataset.number);
-        // console.log(targetNumber);
+            const updateNumber = () => {
+                const targetNumber = parseInt(curElem.dataset.number);
+                // console.log(targetNumber);
 
-        const intialNum = parseInt(curElem.innerText);
-        // console.log(intialNum);
+                const intialNum = parseInt(curElem.innerText);
+                // console.log(intialNum);
 
-        const incrementNumber = Math.trunc(targetNumber/speed);
-        // console.log(incrementNumber);
+                const incrementNumber = Math.trunc(targetNumber / speed);
+                // console.log(incrementNumber);
 
-        if(intialNum < targetNumber){
-            curElem.innerText = `${intialNum + incrementNumber}+`;
-            setTimeout(updateNumber, 10);
-        }
-    };
-    updateNumber();
+                if (intialNum < targetNumber) {
+                    curElem.innerText = `${intialNum + incrementNumber}+`;
+                    setTimeout(updateNumber, 10);
+                }
+            };
+            updateNumber();
 
-});
-observer.unobserve(workSection)
+        });
+        observer.unobserve(workSection)
 
-}, {
-    root:null,
-    threshold:0,
+    }, {
+    root: null,
+    threshold: 0,
 
 });
 
@@ -124,3 +126,17 @@ workObserver.observe(workSection);
 
 
 
+                            //   Creating a Sticky Responsive navbar
+const heroSection = document.querySelector(".section-hero");                           
+                            
+const observer =new IntersectionObserver((entries)=> {
+    const ent =entries[0];
+    console.log(ent)
+    !ent.isIntersecting
+    ?document.body.classList.add("sticky")
+    :document.body.classList.remove("sticky")
+} , {
+    root: null,
+    threshold:0,
+}); 
+observer.observe(heroSection);                           

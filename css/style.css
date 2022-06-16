@@ -71,6 +71,7 @@ li {
 .header {
     padding: 0 4.8rem;
     height: 10rem;
+    height: 10rem;
     background-color: var(--bg);
     /* background-color: rgb(40, 207, 87); */
     display: flex;
@@ -107,9 +108,9 @@ li {
 
 }
 
-                            /* ?Sticky Navbar desigen Start */
+                            /* Sticky Navbar desigen Start Here */
 
- /* .sticky .header{
+ .sticky .header{
     position: fixed;
     top: 0;
     left:0;
@@ -117,7 +118,13 @@ li {
     z-index: 9999;
     background-color:rgba(255, 255, 255, 1);
     box-shadow: var(--shadow);
-}                             */
+    padding-top: 0;
+    padding-bottom: 0;
+}   
+
+.sticky .section-hero{
+    margin-top: 10rem;
+}
 
 
                       /* Mobile Navbar Button Desigen */
