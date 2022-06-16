@@ -122,8 +122,14 @@ li {
     padding-bottom: 0;
 }   
 
-.sticky .section-hero{
-    margin-top: 10rem;
+/* .sticky .section-hero{
+    margin-top  : 10rem;
+    background-color: red;
+} */
+.sticky .section-biodata{
+    margin-top  : 13rem;
+    /* transition: all 0.4s linear; */
+    /* background-color: red; */
 }
 
 
@@ -219,11 +225,11 @@ li {
     background-color: var(--helper);
 }
 
-/* Hero Sestion Start */
+                               /* Hero Sestion Start */
 
 .section-hero {
-    background-color: var(--bg)
-        /* background-color: gold; */
+    background-color: var(--bg);
+    /* background-color:goldenrod; */
 }
 
 .section-hero-data {
