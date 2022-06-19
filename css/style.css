@@ -29,7 +29,11 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 
+}
+body{
+    overflow-x: hidden;
 }
 
 h1,
@@ -586,6 +590,7 @@ li {
      position: relative;
      transition: all 0.7s linear;
      text-align: center;
+     background-color: green;
  }    
   .section-freelancing .overlay{
     position: absolute;
@@ -596,6 +601,7 @@ li {
     background-size: 100%;
     background-color:var(--overlay);
     opacity: 0.7; 
+    /* background-color: blue; */
  }   
  .section-freelancing .container{
      position: relative;
@@ -742,7 +748,52 @@ li {
 
                     /* Media Queries for Mobile Responsive Navbar Button Desigen */
 
-  @media(max-width:980px){
+  
+           /* Media Queries for Mobile Responsive  */
+
+   @media(max-width:1500px){
+    .container{
+        max-width: 130rem;
+        padding:  0 3.4rem;
+        /* background-color: rgb(240, 189, 189); */
+
+    }
+    .navbar-lists{
+        gap: 3rem;
+    }
+
+   }       
+   
+   
+                             /* Below 1200 */
+   @media(max-width:1200px){
+    html{
+        font-size: 56.25%;
+    }
+    .container{
+        max-width: 110rem;
+    }
+    .grid{
+        gap: 4.8rem;
+
+    }
+    .section-freelancing{
+        background-size: cover;
+        
+        /* background-size: 100%; */
+    }
+    /* .section-freelancing .container{
+        height: 23rem;
+    } */
+    
+
+   }       
+                                     /* Below 980 */
+   @media(max-width:980px){
+
+    html{
+        font-size: 50%;
+    }
     .header{
         position: relative;
     }
@@ -802,7 +853,207 @@ li {
         display: block;
     }
 
-  }                  
+                   /* hero Section */
+    .section-hero h1{
+        line-height: 1.07;
+        /* color: red; */
+    }
+               /* Service Section */
+       .section-services .grid{
+        gap: 6rem;
+       }        
+       .section-services .grid-three-column{
+        grid-template-columns: repeat(2,1fr);
+       }
+
+                            /* Footer Section */
+       .section-footer .grid-four-column{
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-columns: 1fr 1fr;
+        /* padding-left: 11rem; */
+    
+       
+       }   
+    }                  
+
+
+                                           /* Below 790 */
+   @media(max-width:790px){
+    .container{
+        max-width: 75rem;
+        /* background-color: red; */
+    }
+    .header .logo{
+        width: 40%;
+    }
+    .mobile-navbar-btn{
+        /* position: absolute; */
+        display: block;
+        z-index: 9999;
+        color: var(--black);
+        border:3px solid var(--black);
+    }
+    .mobile-nav-icon{
+        width: 3.5rem;
+        height: 3.5rem;
+        color: var(--black);
+    }
+    .section-hero .grid-two-column{
+        grid-template-columns: 1fr ;
+    }
+    .section-hero-data{
+        align-items: center;
+    }
+    .hero-para{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .section-hero img{
+        width: 70%;
+    }
+
+                            /* Responsive Bio Data Section  */
+    .section-biodata .grid-two-column{
+        grid-template-columns:  1fr;
+    }
+    .section-biodata .bio-image{
+        /* grid-row-start: 2;
+        grid-row-end: 1; */
+        grid-row: 2/3;
+        margin-top: 2.3rem;
+    }
+    .section-biodata .bio-image img{
+        width: 55%;
+    }
+
+                                  /* PortFolio Section */
+
+    .section-portfolio .grid-three-column{
+        grid-template-columns: repeat(2,1fr);
+    }
+                                /* Section-work-data Section */
+
+    .section-work-data .grid-four-column{
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-columns: 1fr 1fr;
+    }
+    .section-freelancing{
+        background-size: cover;
+        
+        /* background-size: 100%; */
+    }
+    .section-freelancing .container{
+        height: 30rem;
+    }
+    
+   }
+
+                                  /* Below 660px */
+   @media(max-width:660px){
+    .container{
+        max-width: 70rem;
+        /* background-color: red; */
+    }
+    .header{
+        padding: 0 3.2rem;
+    }
+    .header .logo{
+        width: 40%;
+    }
+    .mobile-navbar-btn{
+        /* position: absolute; */
+        display: block;
+        z-index: 9999;
+        color: var(--black);
+        border:3px solid var(--black);
+    }
+    .mobile-nav-icon{
+        width: 3rem;
+        height: 3rem;
+        color: var(--black);
+    }
+    .header .logo{
+        width: 40%;
+    }
+    .section-portfolio .p-btn{
+        width: 23%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .section-services .grid{
+        gap: 4rem;
+    }        
+    .section-services .grid-three-column{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .section-freelancing h2{
+        font-size: 4rem;
+    }
+
+    .section-freelancing{
+        background-size: cover;
+        
+        /* background-size: 100%; */
+    }
+    .section-freelancing .container{
+        height: 23rem;
+    }
+    .section-contact .contact-container form{
+        margin-left: 5rem;
+        margin-right: 5rem;
+        /* margin: 5rem; */
+    }
+    .section-footer .f-about,
+    .section-footer .f-address{
+
+        grid-column: 1/-1;
+    }
+    .section-contact-main input[type=submit]{
+        max-width: 40%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border: none;
+    }
+   }
+                            /* Below 400 */
+   @media(max-width:400px){
+    .container{
+        max-width: 55rem;
+        /* background-color: red; */
+    }
+    .header .logo{
+        width: 40%;
+    }
+                             /* Service Section */
+    .section-services .grid{
+            gap: 4rem;
+    }        
+    .section-services .grid-three-column{
+            grid-template-columns: repeat(1,1fr);
+    }
+    .section-portfolio .p-btn{
+        width: 23%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .section-work-data{
+        padding: 5rem 0;
+    
+    }
+    .section-freelancing{
+        background-size: cover;
+        
+        /* background-size: 100%; */
+    }
+    .section-freelancing .container{
+        height: 21rem;
+    }
+}
+    
+   
 
 
         
