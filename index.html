@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amit Gorai</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Scroling Effect aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="index.js"></script>
 
 
@@ -14,14 +16,14 @@
 
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="our main logo" srcset="" class="logo">
+        <img src="images/logo1.png" alt="our main logo" srcset="" class="logo">
         <nav class="navbar">
             <ul class="navbar-lists">
-                <li><a href="#" class="navbar-link home-link">Home</a></li>
-                <li><a href="#" class="navbar-link about-link">About</a></li>
-                <li><a href="#" class="navbar-link services-link">Services</a></li>
-                <li><a href="#" class="navbar-link portfolio-link">Portfolio</a></li>
-                <li><a href="#" class="navbar-link contact-link">Contact</a></li>
+                <li><a href="#home" class="navbar-link home-link">Home</a></li>
+                <li><a href="#bio-data" class="navbar-link about-link">About</a></li>
+                <li><a href="#service" class="navbar-link services-link">Services</a></li>
+                <li><a href="#portfolio-section" class="navbar-link portfolio-link">Portfolio</a></li>
+                <li><a href="#contact" class="navbar-link contact-link">Contact</a></li>
             </ul>
 
         </nav>
@@ -35,7 +37,7 @@
 
                                     <!-- Main Hero Section -->
     <main>
-        <section class="section-hero section">
+        <section class="section-hero section" id="home">
 
             <div class="container grid grid-two-column">
                 <!-- hero Section Left Side -->
@@ -60,12 +62,12 @@
 
                                        <!-- Our Bio-Data Section -->
 
-    <section class="section-biodata section">
+    <section class="section-biodata section" id="bio-data"  >
 
         <div class="container grid grid-two-column">
             <!-- bio left side data -->
-            <div class="bio-image">
-                <img src="images/biodata.jpg" alt=" my bio data images">
+            <div class="bio-image" >
+                <img src="images/biodata.jpg" alt=" my bio data images"  data-aos="fade-right">
             </div>
             <!-- bio right side data -->
             <div class="bio-data">
@@ -76,7 +78,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolorum?
                 </p>
-                <div class="bio-data-stats">
+                <div class="bio-data-stats" data-aos="fade-left">
                     <div class="bio-stats">
                         <h3>Desigen</h3>
                         <div class="bio-progress-bar bio-progress-bar-1">
@@ -117,18 +119,18 @@
     </section>
 
                                    <!-- Our PortFolio Section /Letest Work -->
-    <section class="section section-portfolio" id="portfolio-section">
+    <section class="section section-portfolio" id="portfolio-section" data-aos="zoom-in">
         <div class="container">
             <h1 class="common-heading">Latest Work</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci labore, laboriosam eaque consequuntur
                 suscipit quidem!</p>
         </div>
         <div class="p-btns">
-            <div class="btn p-btn" data-btn-num="1">Website</div>
-            <div class="btn p-btn" data-btn-num="2">Youtube</div>
-            <div class="btn p-btn" data-btn-num="3">Desigen</div>
+            <div class="btn p-btn" data-btn-num="1" data-aos="fade-left">Website</div>
+            <div class="btn p-btn" data-btn-num="2"data-aos="fade-left">Android</div>
+            <div class="btn p-btn" data-btn-num="3"data-aos="fade-left">Desigen</div>
         </div>
-        <div class="container grid grid-three-column portfolio-images">
+        <div class="container grid grid-three-column portfolio-images" >
             <div class="img-overlay p-btn-1">
                 <img src="images/folio/5.jpg" alt="my works">
                 <div class="overlay">
@@ -170,7 +172,6 @@
 
 
     <!-- Our Work Counter Section -->
-
     <section class="section section-work-data">
         <div class="container grid grid-four-column">
             <div>
@@ -193,8 +194,8 @@
     </section>
 
     <!-- Our Services Section -->
-    <section class="section section-services">
-        <div class="container">
+    <section class="section section-services" id="service">
+        <div class="container" data-aos="fade-right">
             <h2 class="common-heading">Services</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga possimus quis, quia eaque veritatis
                 recusandae!</p>
@@ -261,7 +262,7 @@
     <section class="section section-freelancing">
         <div class="overlay"></div>
         <div class="container">
-            <h2>I am <span>available</span> for FreeLancing</h2>
+            <h2>I am <span data-aos="fade-right" data-aos-offset="200">available</span> for FreeLancing</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi vitae illum harum! Facere, assumenda
                 repudiandae.</p>
             <a href="/contact.html" class="btn">HIRE ME</a>
@@ -272,11 +273,11 @@
 
                         <!-- *TODO:Contact-Us Section Start Here -->
 
-    <section class="section section-contact">
+    <section class="section section-contact" id="contact">
         <div class="container">
             <h2 class="common-heading">Contact Us</h2>
         </div>
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.2655937190993!2d88.50691961423077!3d22.56916773878597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020afe3fa83dab%3A0xda5c16b563780319!2sShapoorji%20Pallonji%20Shukhobrishti%20Housing%20Complex!5e0!3m2!1sen!2sin!4v1654693002740!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.2655937190993!2d88.50691961423077!3d22.56916773878597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020afe3fa83dab%3A0xda5c16b563780319!2sShapoorji%20Pallonji%20Shukhobrishti%20Housing%20Complex!5e0!3m2!1sen!2sin!4v1654693002740!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="zoom-out"></iframe>
 
         <div class="section-contact-main contact-container">
             <form action="https://formspree.io/f/mwkyzqle"
@@ -300,7 +301,7 @@
                     <label for="subject"></label>
                     <input type="text" name="subject" placeholder="Subject" id="subject" autocomplete="off" required>
                 </div>
-                <div>
+                <div data-aos="zoom-out">
                     <label for="textarea"></label>
                     <textarea name="textarea" id="textarea" placeholder="Write Your Message Here"  rows="10" cols="30" autocomplete="off" required minlength="10" ></textarea>
                 </div>
@@ -328,7 +329,7 @@
                     <li>
                         <span>
                             <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </span><a href="#">Home</a>
+                        </span><a href="#home">Home</a>
                     </li>
                     <li>
                         <span>
@@ -397,21 +398,28 @@
                         <p>
                             <span>
                                 <ion-icon name="location-outline"></ion-icon>
-                            </span>Pune,India
+                            </span>Kolkata, India
                         </p>
                     </div>
                     <div>
                         <p>
                             <span>
                                 <ion-icon name="call-outline"></ion-icon>
-                            </span><a href="tel:+917001355098">7001355098</a>
+                            </span><a href="tel:+917001355098"><strong>Call</strong> me</a>
                         </p>
                     </div>
                     <div>
                         <p>
                             <span>
-                                <ion-icon name="mail-outline"></ion-icon>
-                            </span><a href="mailto:goraiamit320@gmail.com" class="email">goraiamit320@gmail.com</a>
+                                <ion-icon name="mail-unread-outline"></ion-icon>
+                            </span><a href="mailto:goraiamit320@gmail.com" class="email"><strong>Email</strong> me</a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>
+                                <ion-icon name="calendar-outline"></ion-icon>
+                            </span><a href="mailto:goraiamit320@gmail.com" class="email">Book a <strong>Zoom meeting</strong></a>
                         </p>
                     </div>
                 </address>
@@ -432,11 +440,24 @@
                 </a>
             </div>
             <div class="f-credits">
-                <p>copyright ©2022 All rights reserved | This Website is made with ❤️ by Amit Gorai</p>
+                <p>copyright ©2022 All rights reserved | This Website is made with ❤️ by <p data-aos="zoom-out"data-aos-offset="40">Amit Gorai</p></p>
             </div>
         </div>
     </footer>
-
+                  <!-- scrool effect aos js link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                  <!-- INITIALIZE AOS -->
+    <script>
+        AOS.init(
+            {
+                // Aos Default setting override
+                offset:300,
+                // duration:1000,
+                // easing:linear,
+                duration:1500
+            }
+        );
+    </script>
 </body>
 
 </html>
