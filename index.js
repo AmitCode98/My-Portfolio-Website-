@@ -1,3 +1,12 @@
+// Preloder page function
+// const preloder = document.getElementsByClassName('loading')
+// function myFunction(){
+//     preloder.style.display= 'none';
+// }
+window.onload =function(){
+    document.getElementById("loading").style.display = "none"
+}
+
 //            // !form validation
 
 // const form = document.getElementById('form')
@@ -75,6 +84,29 @@ const mobile_nav = document.querySelector(".mobile-navbar-btn");
 const headerElem = document.querySelector(".header");
 
 mobile_nav.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});
+
+const homeM = document.querySelector(".home-link");
+homeM.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});  
+
+const serviceM = document.querySelector(".services-link");
+serviceM.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});
+
+const aboutM = document.querySelector(".about-link");
+aboutM.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});
+const portfolioM = document.querySelector(".portfolio-link");
+portfolioM.addEventListener("click", () => {
+    headerElem.classList.toggle("active")
+});
+const contactM = document.querySelector(".contact-link");
+contactM.addEventListener("click", () => {
     headerElem.classList.toggle("active")
 });
 

@@ -28,7 +28,13 @@
     --bg:#EEF4F9; 
     --icon-bg:rgba(144,172,209,0.2);
     --gradient: linear-gradient(0deg, rgb(132 144 255)0%, rgb(98 189 252)100%);
-    --gradientSupport: -webkit-linear-gradient(0deg, rgb(132 144 255)0%, rgb(98 189 252)100%);
+    /* --gradientSupport: -webkit-linear-gradient(0deg, rgb(132 144 255)0%, rgb(98 189 252)100%); */
+    
+    --gradientSupport: #6C48C2;
+
+    --gradientSupport2:rgb(108,72,194)
+    linear-gradient(130deg, rgba(108,72,194,1) 0%, rgba(0,201,167,1) 100%);
+
     --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
     --shadowSupport: 0px 20px 20px 0px rgb(132 144 355 / 30%);
 }
@@ -78,6 +84,20 @@ li {
     list-style: none;
 }
 
+/* Preloder section start */
+#loading{
+    width: 100%;
+    height: 100vh;
+    background: #fff url(/images/loader2.gif);
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 9999;
+    background-position: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
 /* Header Sestion Start */
 
 .header {
@@ -85,6 +105,7 @@ li {
     height: 10rem;
     height: 10rem;
     background-color: var(--bg);
+    /* background-color:var(--gradientSupport2);; */
     /* background-color: rgb(40, 207, 87); */
     display: flex;
     justify-content: space-between;
@@ -108,7 +129,7 @@ li {
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--para);
+    /* color: var(--para); */
     /* font-family: 'Poppins', sans-serif; */
     color: var(--black);
     transition: color 0.3s linear;
@@ -116,7 +137,9 @@ li {
 
 .navbar-link:hover,
 .navbar-link:active {
-    color: var(--helper);
+    /* color: var(--helper); */
+    color: var(--gradientSupport);
+    
 
 
 }
@@ -151,6 +174,7 @@ li {
 .mobile-navbar-btn {
     display: none;
     background-color: transparent;
+    /* background-color: red; */
     border: none;
     cursor: pointer;
 }
@@ -192,10 +216,10 @@ li {
 }
 
 .btn {
+    color: var(--helper-tint);
     background: var(--gradientSupport);
     padding: 1.6rem 3.2rem;
     border: none;
-    color: var(--helper-tint);
     /* color: red; */
     display: inline-block;
     text-transform: uppercase;
@@ -332,8 +356,9 @@ li {
     left: 0;
     width: 80%;
     height: inherit;
-    background: var(--gradientSupport);
+    /* background: var(--gradientSupport2); */
     /* background: var(--helper); */
+    background: var(--gradientSupport2);
     border-radius: 10rem;
 }
 
@@ -451,7 +476,7 @@ li {
     width: 100%;
     height: 100%;
     background: var(--gradientSupport);
-    background: var(--helper);
+    /* background: var(--helper); */
     opacity: 0;
     display: flex;
     align-items: center;
@@ -496,7 +521,7 @@ li {
 /* Our Work Counter Section */
 
 .section-work-data {
-    background: var(--gradientSupport);
+    background: var(--gradientSupport2);
     text-align: center;
     color: var(--white);
 }
@@ -553,7 +578,7 @@ li {
     border-radius: 56% 44% 70% 30% / 33% 54% 46% 70%;
     padding: 1.4rem 1.8rem;
     position: relative;
-    color: var(--heading);
+    color: var(--gradientSupport);
     /* color:red; */
     animation: water-wave 3s linear infinite;
 }
@@ -573,7 +598,7 @@ li {
     height: 90%;
     border-radius: 56% 44% 70% 30% / 33% 54% 46% 70%;
     /* background-color: var(--black); */
-    border: 0.1rem solid var(--black);
+    border: 0.1rem solid var(--gradientSupport);
     background-color: transparent;
     animation: water-wave 3s linear infinite;
 
@@ -625,7 +650,8 @@ li {
     width: 100%;
     height: 100%;
     background-size: 100%;
-    background-color: var(--overlay);
+    /* background-color: var(--overlay); */
+    background-color: var(--gradientSupport);
     opacity: 0.7;
     /* background-color: blue; */
 }
@@ -871,7 +897,7 @@ li {
     .header {
         position: relative;
     }
-
+                         /* Responsive mobile menu icon desigen */
     .mobile-navbar-btn {
         /* position: absolute; */
         display: block;
@@ -898,6 +924,7 @@ li {
         top: 0;
         left: 0;
         background: var(--gradient);
+        background: var(--gradientSupport2);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1169,4 +1196,10 @@ li {
     .section-freelancing .container {
         height: 21rem;
     }
+    .section-contact-main input[type=submit] {
+        max-width: 45%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border: none;
 }
