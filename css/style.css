@@ -105,7 +105,7 @@ li {
     height: 10rem;
     height: 10rem;
     background-color: var(--bg);
-    /* background-color:var(--gradientSupport2);; */
+    /* background-color:var(--gradientSupport); */
     /* background-color: rgb(40, 207, 87); */
     display: flex;
     justify-content: space-between;
@@ -138,7 +138,8 @@ li {
 .navbar-link:hover,
 .navbar-link:active {
     /* color: var(--helper); */
-    color: var(--gradientSupport);
+    /* color: var(--gradientSupport); */
+    color: var(--helper);
     
 
 
@@ -163,8 +164,8 @@ li {
     background-color: red;
 } */
 .sticky .section-biodata {
-    margin-top: 13rem;
-    /* transition: all 0.4s linear; */
+    margin-top: 20rem;
+    transition: all 0.3s linear;
     /* background-color: red; */
 }
 
@@ -923,7 +924,7 @@ li {
         position: absolute;
         top: 0;
         left: 0;
-        background: var(--gradient);
+        /* background: var(--gradient); */
         background: var(--gradientSupport2);
         display: flex;
         justify-content: center;
@@ -945,6 +946,8 @@ li {
     .navbar .navbar-lists .navbar-link:visited {
         color: var(--black);
         font-size: 3.2rem;
+        /* color: var(--white); */
+        /* letter-spacing: 0.1rem; */
     }
 
     .active .navbar {
@@ -1077,7 +1080,9 @@ li {
 /* Below 660px */
 @media(max-width:660px) {
     .container {
+
         max-width: 70rem;
+        
         /* background-color: red; */
     }
 
@@ -1152,6 +1157,11 @@ li {
         text-align: center;
         border: none;
     }
+    .sticky .section-biodata {
+        margin-top: 15rem;
+        /* transition: all 0.2s linear; */
+        /* background-color: red; */
+    }
 }
 
 /* Below 400 */
@@ -1203,5 +1213,10 @@ li {
         text-align: center;
         border: none;
 
+    }
+    .hero-heading {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 5.4rem;
     }
 }

@@ -163,7 +163,7 @@ const heroSection = document.querySelector(".section-hero");
                             
 const observer =new IntersectionObserver((entries)=> {
     const ent =entries[0];
-    console.log(ent)
+    // console.log(ent)
     !ent.isIntersecting
     ?document.body.classList.add("sticky")
     :document.body.classList.remove("sticky")
